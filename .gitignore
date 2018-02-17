@@ -1,3 +1,4 @@
 bin/
 connector/
 src/MySQL.java
+build/
