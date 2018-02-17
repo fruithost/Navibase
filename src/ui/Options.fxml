@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<bottom>
+		<HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="600.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Button cache="true" mnemonicParsing="false" text="OK">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Button>
+				<Button mnemonicParsing="false" text="Cancel">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+			<padding>
+				<Insets left="5.0" right="5.0" />
+			</padding>
+		</HBox>
+	</bottom>
+	<center>
+		<SplitPane dividerPositions="0.2508361204013378" prefHeight="200.0"
+			prefWidth="200.0" BorderPane.alignment="CENTER">
+			<items>
+				<TreeView showRoot="false">
+					<TreeItem value="Options" expanded="true">
+						<children>
+							<TreeItem value="General" expanded="true">
+								<children>
+									<TreeItem value="Docking" />
+									<TreeItem value="Code Insight" />
+									<TreeItem value="Auto Save" />
+								</children>
+							</TreeItem>
+							<TreeItem value="Apperance" expanded="true">
+								<children>
+									<TreeItem value="Font" />
+									<TreeItem value="Color" />
+									<TreeItem value="Main Window" />
+									<TreeItem value="Editor" />
+									<TreeItem value="Data &amp; Grid" expanded="true">
+										<children>
+											<TreeItem value="Display Format" />
+										</children>
+									</TreeItem>
+								</children>
+							</TreeItem>
+							<TreeItem value="Model" />
+							<TreeItem value="Miscellaneous" expanded="true">
+								<children>
+									<TreeItem value="File Association" />
+									<TreeItem value="Activation &amp; Updater" />
+									<TreeItem value="Proxy" />
+									<TreeItem value="OCI" />
+								</children>
+							</TreeItem>
+						</children>
+					</TreeItem>
+				</TreeView>
+				<VBox prefHeight="200.0" prefWidth="100.0" />
+			</items>
+		</SplitPane>
+	</center>
+</BorderPane>

@@ -1,0 +1,154 @@
+/** {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-radius: 0;
+    -fx-border-insets: 0;
+}*/
+
+/* Menu */
+.context-menu {
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 0.0;
+}
+
+.radio-menu-item:checked > .left-container,
+.check-menu-item:checked > .left-container {
+   -fx-padding: 5.0 10.0;
+   -fx-background-insets: -5.0 3.0 -4.0 -5.0;
+   -fx-alignment: center-left;
+}
+   
+.radio-menu-item:checked > .left-container > .radio,
+.check-menu-item:checked > .left-container > .check {
+	-fx-background-color: #444444;
+	-fx-shape: "M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z";
+	-fx-scale-x: 0.5;
+	-fx-scale-y: 0.5;
+    -fx-padding: 3.0;
+}
+
+.image-menu-item > .left-container > .radio,
+.image-menu-item:checked > .left-container > .radio {
+	-fx-shape: "";
+    -fx-padding: 3.0;
+}
+
+.radio-menu-item:checked > .left-container,
+.check-menu-item:checked > .left-container {
+    -fx-background-color: #c0dcf3;
+}
+
+.image-menu-item > .left-container,
+.image-menu-item:checked > .left-container {
+	-fx-padding: 5.0 10.0;
+	-fx-background-position: center center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 16.0;
+   -fx-background-insets: -5.0 3.0 -4.0 -5.0;
+}
+
+.image-menu-item.table > .left-container {
+	-fx-background-image: url("../resources/table_menu.png");	
+}
+
+.image-menu-item.view > .left-container {
+	-fx-background-image: url("../resources/view_menu.png");	
+}
+
+.image-menu-item.function > .left-container {
+	-fx-background-image: url("../resources/function_menu.png");	
+}
+
+.image-menu-item.event > .left-container {
+	-fx-background-image: url("../resources/event_menu.png");	
+}
+
+.image-menu-item.query > .left-container {
+	-fx-background-image: url("../resources/query_menu.png");	
+}
+
+.image-menu-item.report > .left-container {
+	-fx-background-image: url("../resources/report_menu.png");	
+}
+
+.image-menu-item.backup > .left-container {
+	-fx-background-image: url("../resources/backup_menu.png");	
+}
+
+.image-menu-item.schedule > .left-container {
+	-fx-background-image: url("../resources/schedule_menu.png");	
+}
+
+.image-menu-item.model > .left-container {
+	-fx-background-image: url("../resources/model_menu.png");	
+}
+
+.image-menu-item.user > .left-container {
+	-fx-background-image: url("../resources/user_menu.png");	
+}
+
+/* ToolBar */
+Button {
+	-fx-padding: 5.0;
+    -fx-border-style: none;
+    -fx-border-width: 0.0;
+    -fx-border-insets: 0.0;
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-border-radius: 0.0;
+    -fx-background-radius: 0.0;
+}
+
+Button:hover {
+    -fx-background-color: #d8e6f2;
+}
+
+Button.active {
+    -fx-background-color: #c0dcf3;	
+}
+
+MenuBar, ToolBar, Menu {
+	-fx-border-style: none;
+    -fx-background-color: transparent;
+}
+
+/* Tabs */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0.0;
+}
+
+.tab-pane .tab {
+	-fx-padding: 0.0 5.0;
+	-fx-border-style: solid;
+	-fx-border-color: #d9d9d9;
+    -fx-background-color: #F0F0F0;
+    -fx-background-radius: 0.0;
+   -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab-pane .tab:selected {
+	-fx-padding: 1.0 5.0 2.0 5.0;
+	-fx-border-color: #d9d9d9;
+    -fx-background-color: #FFFFFF;
+}
+
+/* Panel */
+.title {	
+	-fx-border-style: solid;
+	-fx-border-color: #d9d9d9;
+    -fx-background-color: transparent;
+    -fx-border-width: 1 1 0 1;
+}
+
+.content {
+	-fx-border-style: solid;
+	-fx-border-color: #d9d9d9;
+    -fx-background-color: transparent;
+}
+
+.text {
+}

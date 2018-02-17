@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+
+<MenuBar xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fruithost.MenuController">
+	<menus>
+		<Menu mnemonicParsing="false" text="File">
+			<items>
+				<Menu mnemonicParsing="false" fx:id="file_connection" text="New Connection"><items></items></Menu>
+				<MenuItem fx:id="file_connection_open" mnemonicParsing="false" onAction="#onClick" text="Open Connection" />
+				<MenuItem fx:id="file_connection_close" disable="true" mnemonicParsing="false" onAction="#onClick" text="Close Connection" />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem fx:id="file_export" mnemonicParsing="false" onAction="#onClick" text="Export Connections..." />
+				<MenuItem fx:id="file_import" mnemonicParsing="false" onAction="#onClick" text="Import Connections..." />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem fx:id="file_cloud" mnemonicParsing="false" onAction="#onClick" text="Cloud..." />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem mnemonicParsing="false" fx:id="file_exit" onAction="#onClick" text="Exit" />
+			</items>
+		</Menu>
+		<Menu mnemonicParsing="false" text="View">
+			<items>
+				<RadioMenuItem mnemonicParsing="false" fx:id="view_list" onAction="#onClick" selected="true" text="List">
+					<toggleGroup>
+						<ToggleGroup fx:id="view" />
+					</toggleGroup>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_detail" text="Detail" toggleGroup="$view" />
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_diagram" text="ER Diagram" toggleGroup="$view" />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_flatten_connection" text="Flatten Connection" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_flatten_objects" text="Flatten Object List" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_onlyactive"  text="Show Only Active Objects">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="F12" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+					</accelerator>
+				</CheckMenuItem>
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<Menu mnemonicParsing="false" text="Sort">
+					<items>
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_name" text="Name" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_group" text="Group" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_ai" text="Auto Increment Value" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_format" text="Row Format" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_date_modified" text="Modified Date" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_date_created" text="Created Date" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_index" text="Index Length" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_data" text="Data Length" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_type" text="Table Type" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_rows" text="Rows" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_max" text="Max Data Length" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_free" text="Data Free" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_time" text="Check Time" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_collation" text="Collation" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_options" text="Create Options" />
+						<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_sort_comment" text="Comment" />
+					</items>
+				</Menu>
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_columns" text="Choose Columns..." />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_connection" text="Show Connection" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_information" text="Show Object Information" />
+				<CheckMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_cloud" text="Show Cloud Activity" />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_table" selected="true" text="Table">
+					<toggleGroup>
+						<ToggleGroup fx:id="show" />
+					</toggleGroup>
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="table" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_view" styleClass="image-menu-item" text="View" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="view" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_function" styleClass="image-menu-item" text="Function" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="function" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_event" styleClass="image-menu-item" text="Event" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="event" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_query" styleClass="image-menu-item" text="Query" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="query" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_report" styleClass="image-menu-item" text="Report" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="report" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_backup" styleClass="image-menu-item" text="Backup" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="backup" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_schedule" styleClass="image-menu-item" text="Schedule" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="schedule" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_model" styleClass="image-menu-item" text="Model" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="model" />
+					</styleClass>
+				</RadioMenuItem>
+				<RadioMenuItem mnemonicParsing="false" onAction="#onClick" fx:id="view_user" styleClass="image-menu-item" text="User" toggleGroup="$show">
+					<styleClass>
+						<String fx:value="image-menu-item" />
+						<String fx:value="user" />
+					</styleClass>
+				</RadioMenuItem>
+			</items>
+		</Menu>
+		<Menu mnemonicParsing="false" text="Favorites">
+			<items>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_1" text="1. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_2" text="2. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_3" text="3. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT3" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_4" text="4. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_5" text="5. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT5" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_6" text="6. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT6" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_7" text="7. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT7" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_8" text="8. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT8" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_9" text="9. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT9" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_0" text="0. Empty">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="DIGIT0" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<Menu mnemonicParsing="false" text="Clear Favorites">
+					<items>
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_1" text="1. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_2" text="2. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_3" text="3. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_4" text="4. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_5" text="5. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_6" text="6. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_7" text="7. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_8" text="8. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_9" text="9. Empty" />
+						<MenuItem disable="true" mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_0" text="0. Empty" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="favorites_clear_all" text="Clear All" />
+					</items>
+				</Menu>
+			</items>
+		</Menu>
+		<Menu mnemonicParsing="false" text="Tools">
+			<items>
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_transfer" text="Data Transfer..." />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_syncronization_data" text="Data Synchronization..." />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_syncronization_structure" text="Structure Synchronization..." />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_console" text="Console...">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="F6" control="UP" meta="ANY" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<Menu mnemonicParsing="false" fx:id="tools_monitor" text="Server Monitor"><items></items></Menu>
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_find" text="Find In Database/Schema..." />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_log" text="History Log...">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="tools_options" text="Options..." />
+			</items>
+		</Menu>
+		<Menu mnemonicParsing="false" text="Window">
+			<items>
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="window_next" text="Next Window">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="TAB" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+			</items>
+		</Menu>
+		<Menu mnemonicParsing="false" text="Help">
+			<items>
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="help_help" text="Help">
+					<accelerator>
+						<KeyCodeCombination alt="UP" code="F1" control="UP" meta="ANY" shift="UP" shortcut="UP" />
+					</accelerator>
+				</MenuItem>
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="help_update" text="Check For Updates..." />
+				<SeparatorMenuItem mnemonicParsing="false" />
+				<MenuItem mnemonicParsing="false" onAction="#onClick" fx:id="help_about" text="About" />
+			</items>
+		</Menu>
+	</menus>
+</MenuBar>
